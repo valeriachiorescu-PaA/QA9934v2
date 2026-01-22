@@ -1,0 +1,32 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{
+    // Incoming value as a string (text)
+    string fileSizeInBytesText = "[TknParams:FileSize]"; // Example: size in text form
+
+    // Variable to hold the converted file size in bytes
+    long fileSizeInBytes = 0;
+
+    // Attempt to convert the string to a long value
+    bool isValid = long.TryParse(fileSizeInBytesText, out fileSizeInBytes);
+
+    // If the conversion is successful, proceed with conversion to MB/KB
+    string displaySize = "Invalid size"; // Default in case of invalid input
+    if (isValid)
+    {
+        // Convert bytes to megabytes (MB)
+        double fileSizeInMB = fileSizeInBytes / (1024.0 * 1024.0);
+
+        // Convert bytes to kilobytes (KB) if file size is less than 1 MB
+        if (fileSizeInMB < 1)
+        {
+            double fileSizeInKB = fileSizeInBytes / 1024.0;
+            displaySize = Math.Round(fileSizeInKB, 1) + " KB";
+        }
+        else
+        {
+            displaySize = Math.Round(fileSizeInMB, 1) + " MB";
+        }
+    }
+}
+
+@displaySize

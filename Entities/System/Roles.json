@@ -1,0 +1,11 @@
+{
+  "Id": 2,
+  "GlobalId": "99b51ef7-2d15-49bf-95e6-4b0086912470",
+  "BuiltInEntityType": "Roles",
+  "Properties": [
+    {
+      "Name": "RoleName",
+      "GlobalId": "f6574955-bcdb-4ee9-92d1-accd3fced25d"
+    }
+  ]
+}

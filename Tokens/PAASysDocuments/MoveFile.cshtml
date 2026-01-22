@@ -1,0 +1,31 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@using DotNetNuke.Services.FileSystem
+@using DotNetNuke.Common.Utilities
+@using DotNetNuke.Entities.Users
+@{
+    int fileId = Convert.ToInt32(TknParams.FileId.Value.ToString());
+    int destinationFolderId = Convert.ToInt32(TknParams.FolderId.Value.ToString());
+    var fileManager = FileManager.Instance;
+    var folderManager = FolderManager.Instance;
+
+    // Get the file and destination folder objects
+    var file = fileManager.GetFile(fileId);
+    var destinationFolder = folderManager.GetFolder(destinationFolderId);
+
+    if (file != null && destinationFolder != null)
+    {
+        try
+        {
+            fileManager.MoveFile(file, destinationFolder);
+            <p>File moved successfully!</p>
+        }
+        catch (Exception ex)
+        {
+            <p>Error: @ex.Message</p>
+        }
+    }
+    else
+    {
+        <p>File or folder not found.</p>
+    }
+}

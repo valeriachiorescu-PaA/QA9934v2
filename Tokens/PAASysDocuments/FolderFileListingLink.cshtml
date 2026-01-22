@@ -1,0 +1,20 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{
+    var id = "[TknParams:Id]";
+    var type = "[TknParams:Type]";
+    var name = "[TknParams:Name]";
+}
+
+@if (type == "Folder") {
+    <p style="margin:0;">
+        <span><b><a href="javascript:changeFolder('@id');">@name</a></b></span>
+    </p>
+} 
+else if (type == "File") {
+    @{
+        var fileLink = DotNetNuke.Common.Globals.LinkClick("FileID=" + id, -1, -1);
+    }
+    <p style="margin:0;">
+        <span><b><a href="@fileLink" target="_blank">@name</a></b></span>
+    </p>
+}

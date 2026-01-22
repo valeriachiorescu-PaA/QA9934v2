@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "globalId": "7262c6af-4c52-4f2f-9ffb-5f735b032226",
+  "namespace": {
+    "id": 2,
+    "globalId": "bbcc7ff0-e9e8-4c07-a2dc-cb59a5cb3f00",
+    "name": "PAASysDocuments",
+    "isSystem": true
+  },
+  "name": "FolderFileListingLink",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "",
+    "debug": false,
+    "language": "",
+    "type": "razor"
+  }
+}

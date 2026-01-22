@@ -1,0 +1,23 @@
+{
+  "id": 4,
+  "globalId": "56d1163e-30de-45d3-a376-c9fcf2e632f9",
+  "namespace": {
+    "id": 2,
+    "globalId": "bbcc7ff0-e9e8-4c07-a2dc-cb59a5cb3f00",
+    "name": "PAASysDocuments",
+    "isSystem": true
+  },
+  "name": "PortalRootFolderId",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "SELECT \r\n    FolderID AS PortalRootFolder\r\nFROM dbo.{objectQualifier}Folders\r\nWHERE PortalId = '[Portal:PortalID]' AND ISNULL(FolderPath, '') = ''",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}

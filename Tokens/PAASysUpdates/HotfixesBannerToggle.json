@@ -1,0 +1,24 @@
+{
+  "id": 21,
+  "globalId": "3d664eb9-8e41-4105-86d0-9e4dfc2babee",
+  "namespace": {
+    "id": 3,
+    "globalId": "a75136f8-bb15-4d44-a495-78a4699d7e81",
+    "name": "PAASysUpdates",
+    "description": "",
+    "isSystem": true
+  },
+  "name": "HotfixesBannerToggle",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "IF EXISTS (    \r\n  SELECT TOP 1 SU.Id \r\n  FROM dbo.{objectQualifier}PlantAnApp_Updates_SpecificUpdates AS SU \r\n  INNER JOIN dbo.{objectQualifier}PlantAnApp_Updates_Hotfixes AS H ON H.ProductID = SU.Product \r\n  WHERE \r\n    (H.InstalledVersion != SU.Version AND (SU.Priority = 1 OR SU.Priority = 2)) \r\n        OR \r\n    (H.InstalledVersion != H.Version  AND (H.Priority = 1 OR H.Priority = 2))\r\n) \r\nOR EXISTS (\r\n    SELECT 1 \r\n    FROM paa.Updates_Cumulative\r\n    WHERE Priority = 1 OR Priority = 2\r\n)\r\nBEGIN \r\n    SELECT '[PAASysUpdates:HotfixesBanner]' \r\nEND \r\nELSE \r\nBEGIN \r\n    SELECT '' \r\nEND\r\n      ",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}

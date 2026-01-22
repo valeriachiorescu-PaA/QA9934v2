@@ -1,0 +1,23 @@
+{
+  "id": 5,
+  "globalId": "45488827-3312-445e-a199-58fdfed2f22c",
+  "namespace": {
+    "id": 2,
+    "globalId": "bbcc7ff0-e9e8-4c07-a2dc-cb59a5cb3f00",
+    "name": "PAASysDocuments",
+    "isSystem": true
+  },
+  "name": "RenderIcon",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "",
+    "debug": false,
+    "language": "",
+    "type": "razor"
+  }
+}

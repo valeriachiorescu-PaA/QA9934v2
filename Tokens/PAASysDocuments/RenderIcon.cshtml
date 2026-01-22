@@ -1,0 +1,62 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{ var ext = TknParams.Extension.Value.ToString(); 
+var provider = TknParams.FolderProvider.Value.ToString(); 
+var portalUrl = "[URL:BaseUrl]"; 
+var iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/ExtPptx_32X32_Standard.png"">"; 
+} 
+@if (ext != "") { 
+    @if (ext == "folder") { 
+        @if (provider == "StandardFolderProvider") { 
+            iconUrl = @"<img src=""" + @portalUrl + @"/icons/sigma/Folder_32x32_Standard.png"">"; 
+            } 
+        else if (provider == "SecureFolderProvider") { 
+            iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/FolderSecure_32x32_Standard.png"">"; 
+            } 
+        else if (provider == "DatabaseFolderProvider") { 
+            iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/FolderDatabase_32x32_Standard.png"">"; 
+            } 
+        else if (provider == "DnnSharpS3FolderProvider") { 
+            iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/ExtClosedFolder_32X32_Standard.png"">"; 
+            } 
+        else { 
+            iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/FolderStandard_32x32_Standard.png"">"; 
+            } 
+        } 
+    else if (ext == "pdf") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extpdf_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "jpg") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extjpg_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "mp4") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extmp4_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "xlsx" || ext == "xls") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extxlsx_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "css") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extcss_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "jpeg") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extjpeg_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "png") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extpng_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "mov") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/ExtMOV_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "doc" || ext == "docx") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Extdocx_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "txt") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/Exttxt_32x32_Standard.png"">"; 
+        } 
+    else if (ext == "pptx" || ext == "ppt") { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/ExtPptx_32X32_Standard.png"">"; 
+        } 
+    else { 
+        iconUrl = @"<img src="""+ @portalUrl + @"/icons/sigma/ExtFile_32X32_Standard.png"">"; 
+        } 
+    } 
+@iconUrl

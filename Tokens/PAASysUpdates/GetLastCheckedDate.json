@@ -1,0 +1,24 @@
+{
+  "id": 14,
+  "globalId": "e680fa06-15cb-47c0-9667-9e9257b0efc9",
+  "namespace": {
+    "id": 3,
+    "globalId": "a75136f8-bb15-4d44-a495-78a4699d7e81",
+    "name": "PAASysUpdates",
+    "description": "",
+    "isSystem": true
+  },
+  "name": "GetLastCheckedDate",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "Select FORMAT(MAX(CreatedDate), 'dddd, MMM dd, yyyy, h:mm tt') AS LastDateChecked from dbo.{objectQualifier}PlantAnApp_Updates",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
