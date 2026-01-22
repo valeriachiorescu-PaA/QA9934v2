@@ -342,6 +342,12 @@
       "NamespaceGlobalId": "b6f50228-559d-4388-be9b-84b18cf62109",
       "DefinitionPath": "Workflows/System/Get App Builder Updates/workflow.json",
       "DiagramPath": "Workflows/System/Get App Builder Updates/diagram.xml"
+    },
+    {
+      "GlobalId": "37c1a27c-8fb8-4d01-a0dd-991d8bcbcb0b",
+      "NamespaceGlobalId": "5e094b5d-f55b-4e59-8b39-b5486824bc3b",
+      "DefinitionPath": "Workflows/Default/Test/workflow.json",
+      "DiagramPath": "Workflows/Default/Test/diagram.xml"
     }
   ]
 }

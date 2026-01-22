@@ -1,0 +1,90 @@
+{
+  "InputFields": [],
+  "OutputFields": [],
+  "Id": 2,
+  "GlobalId": "37c1a27c-8fb8-4d01-a0dd-991d8bcbcb0b",
+  "ContractId": null,
+  "ConfigGenerationGlobalId": "37c1a27c-8fb8-4d01-a0dd-991d8bcbcb0b",
+  "EnvironmentId": 1,
+  "Name": "Test",
+  "Description": "",
+  "IsDebug": false,
+  "IsSystem": false,
+  "ActionList": {
+    "Id": 666,
+    "GlobalId": "893b932e-85d3-4b9d-89c1-fa1523d2e51c",
+    "Actions": [
+      {
+        "Id": 369,
+        "GlobalId": "00000000-0000-0000-0000-000000000000",
+        "Description": "Log Event",
+        "ActionErrorMessage": null,
+        "ActionStackId": 666,
+        "ActionType": "LogEvent",
+        "Condition": null,
+        "IsDeleted": false,
+        "IsDisabled": false,
+        "OrderIndex": 0,
+        "DiagramUID": "Activity_0aihqmm",
+        "ActionParameters": [
+          {
+            "Id": 1,
+            "GlobalId": "00000000-0000-0000-0000-000000000000",
+            "ActionId": 369,
+            "Name": "EventType",
+            "Value": "ADMIN_ALERT",
+            "ActionStackId": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "OrderIndex": 0,
+            "LastModified": "0001-01-01T00:00:00+00:00",
+            "LastModifiedBy": null
+          },
+          {
+            "Id": 2,
+            "GlobalId": "00000000-0000-0000-0000-000000000000",
+            "ActionId": 369,
+            "Name": "LogProperties",
+            "Value": [
+              {
+                "name": "QA",
+                "value": "ok"
+              }
+            ],
+            "ActionStackId": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "OrderIndex": 0,
+            "LastModified": "0001-01-01T00:00:00+00:00",
+            "LastModifiedBy": null
+          },
+          {
+            "Id": 3,
+            "GlobalId": "00000000-0000-0000-0000-000000000000",
+            "ActionId": 369,
+            "Name": "UserID",
+            "Value": null,
+            "ActionStackId": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "OrderIndex": 0,
+            "LastModified": "0001-01-01T00:00:00+00:00",
+            "LastModifiedBy": null
+          }
+        ],
+        "Parameters": {},
+        "Metadata": {},
+        "HasActionParameters": false
+      }
+    ],
+    "IsInvalid": false
+  },
+  "ActionStackId": 0,
+  "CreatedBy": 1,
+  "CreatedOn": "2026-01-22T15:01:07.8603642+00:00",
+  "LastModifiedBy": 1,
+  "LastModifiedOn": "2026-01-22T15:01:07.8603642+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}
